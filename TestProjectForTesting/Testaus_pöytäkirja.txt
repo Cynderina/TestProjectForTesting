@@ -1,0 +1,5 @@
+﻿Hyvältä näyttää. Dokumenttien tallennus ja haku toimii. Muutama ajatus/ehdotus jatkokehitystä varten:
+
+- Jos haetaan dokumenttia mitä ei löydy, ohjelma voisi tulostaa "Hakemaasi dokumenttia ei löydy".
+- Jos syöttää tilauksen tai laskun arvoksi esim. "eee,eee" ohjelma kaatuu.
+- Tulosta kaikki tilaukset ja laskut -toiminne.
