@@ -84,7 +84,7 @@ namespace Inheritance
             string orderOrInvoice;
             string orderNumber;
             string supplier;
-            string purchaser;
+            string purchaser;           
             double total;
 
             //List for orders and hardcoded orders
@@ -149,7 +149,7 @@ namespace Inheritance
                              
 
                         try
-                        {
+                        {                            
                             Console.WriteLine("Order or Invoice?");
                             orderOrInvoice = Console.ReadLine();
                             while (orderOrInvoice != "Order" && orderOrInvoice != "Invoice")
@@ -159,11 +159,17 @@ namespace Inheritance
                             }
                             Console.WriteLine("Give ordernumber");
                             orderNumber = Console.ReadLine();
+
                             Console.WriteLine("Give supplier");
                             supplier = Console.ReadLine();
-                            Console.WriteLine("Give total");
-                            total = double.Parse(Console.ReadLine());
 
+                            //Console.WriteLine("Give value:");
+                            //total = double.Parse(Console.ReadLine());
+
+                            // Asking total amount for invoice as long as user gives a proper value. 'Catch (Exception ex)' is unused in this scenario....
+                            do Console.WriteLine("Give a total value for invoice: ");
+                            while (!double.TryParse(Console.ReadLine(), out total));
+                            
                             if (orderOrInvoice == "Order")
                             {
                                 Console.WriteLine("Give name of purchaser");
